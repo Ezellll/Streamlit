@@ -15,7 +15,7 @@ st.set_page_config(layout="wide")
 # xgboost==1.2.0
 # gbm==0.0.1
 # random-forest-mc==0.3.7
-df = pd.read_csv(r"/app/Model_deployment.csv")
+df = pd.read_csv(r"https://github.com/Ezellll/Streamlit/blob/c5de7a6dc889c273f4b97f3f3e820106746f3c8e/Model_deployment.csv")
 df_2 = pd.read_csv(r"/app/Streamlit/Model_deployment_2.csv")
 df_X_test = pd.read_csv(r"/app/Streamlit/Model_X_test_2.csv")
 ####################
