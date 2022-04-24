@@ -16,8 +16,8 @@ st.set_page_config(layout="wide")
 # gbm==0.0.1
 # random-forest-mc==0.3.7
 df = pd.read_csv(r"./Model_deployment.csv")
-df_2 = pd.read_csv(r"/app/Streamlit/Model_deployment_2.csv")
-df_X_test = pd.read_csv(r"/app/Streamlit/Model_X_test_2.csv")
+df_2 = pd.read_csv(r"./Model_deployment_2.csv")
+df_X_test = pd.read_csv(r"./Model_X_test_2.csv")
 ####################
 ### INTRODUCTION ###
 ####################
@@ -95,8 +95,8 @@ def fm22_prediction(df, name):
         return ""
     else:
         index = df[df["Name"] == str(name)].index.tolist()[0]
-        final_df = pd.read_csv(r"/app/Streamlit/Model_deployment.csv")
-        model = joblib.load(r'/app/Streamlit/voting_clf_3.pkl')
+        final_df = pd.read_csv(r"./Model_deployment.csv")
+        model = joblib.load(r'./voting_clf_3.pkl')
         y = final_df["Wages"]
         X = final_df.drop(["Wages","Name", "Img_Link"], axis=1)
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=17)
@@ -190,7 +190,7 @@ st.text("")
 st.text("")
 st.subheader("Mapping Players by Team")
 st.write("The Cities of the Players' Team visualized on the World Map")
-html = open(r"/app/Streamlit/Image_Map.html",'r',encoding='utf-8')
+html = open(r"./Image_Map.html",'r',encoding='utf-8')
 source = html.read()
 components.html(source,width=1420,height=500)
 
@@ -215,28 +215,28 @@ with row17_4:
         a = False
 if a:
     html = open(
-        r"/app/Streamlit/Nation_Heatmap.html", 'r',
+        r"./Nation_Heatmap.html", 'r',
         encoding='utf-8')
     source = html.read()
     components.html(source, width=1420, height=500)
 
 if button_2:
     html = open(
-        r"/app/Streamlit/Maaş_ortalamasına_göre_club_ülke_dağılımı.html", 'r',
+        r"./Maaş_ortalamasına_göre_club_ülke_dağılımı.html", 'r',
         encoding='utf-8')
     source = html.read()
     components.html(source, width=1420, height=500)
     a= False
 if button_3:
     html = open(
-        r"/app/Streamlit/Potensiyel_ortalamasına_göre_club_ülke_dağılımı.html", 'r',
+        r"./Potensiyel_ortalamasına_göre_club_ülke_dağılımı.html", 'r',
         encoding='utf-8')
     source = html.read()
     components.html(source, width=1420, height=500)
     a = False
 if button_4:
     html = open(
-        r"/app/Streamlit/Potensiyel_ortalamasına_göre_ülke_dağılımı.html", 'r',
+        r"./Potensiyel_ortalamasına_göre_ülke_dağılımı.html", 'r',
         encoding='utf-8')
     source = html.read()
     components.html(source, width=1420, height=500)
