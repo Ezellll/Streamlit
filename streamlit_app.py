@@ -192,7 +192,7 @@ st.subheader("Mapping Players by Team")
 st.write("The Cities of the Players' Team visualized on the World Map")
 html = open(r"./Image_Map.html",'r',encoding='utf-8')
 source = html.read()
-components.html(source,width=1420,height=500)
+components.html(source,width=1200,height=500)
 
 st.text("")
 st.subheader("Map Visualizations")
@@ -218,28 +218,28 @@ if a:
         r"./Nation_Heatmap.html", 'r',
         encoding='utf-8')
     source = html.read()
-    components.html(source, width=1420, height=500)
+    components.html(source, width=1200, height=500)
 
 if button_2:
     html = open(
         r"./Maaş_ortalamasına_göre_club_ülke_dağılımı.html", 'r',
         encoding='utf-8')
     source = html.read()
-    components.html(source, width=1420, height=500)
+    components.html(source, width=1200, height=500)
     a= False
 if button_3:
     html = open(
         r"./Potensiyel_ortalamasına_göre_club_ülke_dağılımı.html", 'r',
         encoding='utf-8')
     source = html.read()
-    components.html(source, width=1420, height=500)
+    components.html(source, width=1200, height=500)
     a = False
 if button_4:
     html = open(
         r"./Potensiyel_ortalamasına_göre_ülke_dağılımı.html", 'r',
         encoding='utf-8')
     source = html.read()
-    components.html(source, width=1420, height=500)
+    components.html(source, width=1200, height=500)
     a = False
 #4C78A9
 #####
